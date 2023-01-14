@@ -10,13 +10,22 @@
     <!-- <div id="app"></div> -->
     <div class="container">
       <h2 class="my-4">Quick Start</h2>
-      <button id="hello" class="btn btn-primary">Hello!</button>
-      <button id="trigger" class="btn btn-primary">Trigger</button>
+      <button id="hello" class="btn btn-primary">Hello! (Hot Observable [main-2])</button>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <button id="trigger" class="btn btn-primary">Trigger (from [main-3])</button>
     </div>
 
+
+    <br>
+    <br>
     <div class="container">
       <div class="card my-4">
         <div class="card-body">
+          (combineLatest [main-3])
           <input id="temperature-input" class="form-control" placeholder="Temperature" />
           <br />
           <select id="conversion-dropdown" class="form-control">
@@ -29,6 +38,76 @@
         </div>
       </div>
     </div>
-    <script type="module" src="/src/main-3.ts"></script>
+
+
+    <br>
+    <br>
+    <div class="container">
+      (debounceTime [main-4])
+      <input id="slider" class="form-control" type="range" min="0" max="100" />
+    </div>
+
+
+    <br>
+    <br>
+    <div class="container">
+      (concatMap [main-5])
+      <div class="my-4 form-inline">
+        <div class="d-flex">
+          <input id="endpoint" class="form-control" type="text" />
+          <button id="fetch" class="btn btn-primary mx-1">Fetch</button>
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+    <br>
+    <div class="container">
+      <h2 class="my-3">Subject (Multicast [main-6])</h2>
+    
+      <div class="my-4 form-inline">
+        <div class="d-flex">
+          <input id="value-input" class="form-control" type="text" />
+          <button id="emit" class="btn btn-secondary mx-1">
+            Emit
+          </button>
+        </div>
+      </div>
+    
+      <button id="subscribe" class="btn btn-primary">
+        Subscribe
+      </button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+    (BehaviorSubject [main-6])    
+    <nav class="navbar navbar-dark bg-dark">
+      
+      <span class="navbar-brand">Logged in: <span id="logged-in"></span></span>
+    </nav>
+    <div class="container">
+
+      <div class="my-4 form-inline">
+        <button id="login" class="btn btn-primary mr-1">
+          Login
+        </button>
+        <button id="logout" class="btn btn-primary">
+          Logout
+        </button>
+      </div>
+    
+      <button id="print-state" class="btn btn-secondary">
+        Print state
+      </button>
+    </div>
+
+
+
+    <script type="module" src="/src/main-6.ts"></script>
   </body>
 </html>
